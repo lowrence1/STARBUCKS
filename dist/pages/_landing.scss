@@ -1,0 +1,294 @@
+.banner {
+    background-image: url("../img/star.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    background-color: #D0EAE4;
+    background-position-y: 55rem;
+    background-position-x: 20rem;
+    display: flex;
+    text-align: center;
+    padding-top: 10rem;
+
+
+
+    @include mediaQuery($break-lg) {
+        background-position-y: 10rem;
+        background-position-x: 90rem;
+        text-align: unset;
+        align-items:center;
+    }
+
+}
+// -------------GETTING----------//
+.getting{
+    &__start{
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2rem;
+        }
+        p{
+            text-align: center;
+            padding-bottom: 2rem;
+            color: gray;
+            
+          }
+        
+    }
+    &__wrapper{  
+        .getting__text{
+            display: block;
+            position: relative;
+
+          h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2rem;
+          }
+          p{
+            text-align: center;
+            padding-bottom: 2rem;
+            color: gray;
+            
+          }
+          
+        }
+        .numbers{  
+                display: flex;
+              
+            h2{
+                color: green;
+                border: 1px solid green;
+                border-radius: 5rem;
+                width: 5rem;
+                height: 5rem;
+                padding: 1rem 1.8rem;
+            }
+        }
+        .numbers__list{
+          margin-left: 2rem;
+          margin-bottom:1.5rem;
+         
+            
+         p{
+            text-align: justify;
+            color: gray;
+            font-size: 1.5rem;
+         }
+       span{
+        color: green;
+        text-decoration: underline green;
+        cursor: pointer;
+       }
+       h3{
+        padding-bottom: 2rem;
+       }
+     
+        }
+        
+    }
+    @include mediaQuery($break-lg){
+        .getting{
+            &__wrapper{
+                .getting__text{
+                    display: flex;
+                }
+                .numbers{
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0 auto;
+                }
+                .numbers__list{
+                    text-align: center;
+                    width: 34rem;
+                }
+            }
+        }
+        // .getting{
+        //     &__wrapper{
+               
+        //         .getting__text{ 
+        //           display: flex;
+        //           justify-content: center;
+        //             h1{
+        //                 color: pink;
+        //             }
+        //             p{
+        //                 color: pink;
+        //             }
+                  
+        //         .numbers{
+                    
+        //            h2{
+        //             color: red;
+        //             margin-top: 10rem;
+        //             align-items: center;
+        //           margin-left: 5rem;
+                
+        //            }
+        //         }
+        //         .numbers__list{
+        //             color: orange;
+        //             margin-top: 20rem;
+        //             align-items: center;
+        //         }
+        //         }
+
+        //         }
+        //     }
+        }
+    
+}
+// -------COFFEE--------//
+.coffee{
+    &__nav{
+        background:#F1F8F5;
+        padding-top: 5rem;
+        text-align: center;
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 3rem;
+            li{
+                padding: 2rem 2.7rem;
+                border-bottom: 4px solid transparent;
+                &.active{
+                    border-bottom: 4px solid green;
+                }
+                a{
+                    font-size: 2rem;
+                    color:black;
+                    font-weight: 600;
+                }
+            }
+           
+           
+        }
+    }
+    &__content{
+        background: #D4E9E2;
+        .coffee__tab__content{
+          
+             margin: 0 3rem;
+            display: none;
+            &.active{
+                display: flex;
+                flex-direction: column;
+            }
+            img{
+                @include imgFit( 45rem, 100%)
+            }
+            &__text{
+                text-align: center;
+
+            }
+        }
+    }
+    @include mediaQuery($break-lg){
+        .coffee{
+        &__nav{
+            justify-content: center;
+           ul{
+            justify-content: center;
+           }
+        }
+        &__desc{
+            display: flex;
+            justify-content: center;
+            .coffee__tab__content__text{
+                width:25rem;
+                text-align: left;
+                
+                h3{
+                    font-size:2.5rem;
+                  
+                    padding-bottom: 2rem;
+                }
+                p{
+                    text-align: justify;
+                }
+            }
+            .coffee__tab__content{
+                align-items: center;
+                text-align: left;
+                max-width: 100rem;
+                margin: 0 auto;
+                &.active{
+                    flex-direction: row;
+                }
+                .h3{}
+    
+            }
+        }
+       
+    }
+}
+}
+// --------------EXTRAS-----------------//
+
+.endless{
+    &__wrapper{  
+        .endless__text{
+            display: block;
+            position: relative;
+
+          h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2rem;
+          }
+          p{
+            text-align: center;
+            padding-bottom: 2rem;
+            color: gray;
+            
+          }
+          
+        }
+        .extras{  
+                display: flex;
+                img{
+                    width: 12rem;
+                    margin-bottom: 5rem;
+                }
+              
+            h2{
+                color: green;
+                border: 1px solid green;
+                border-radius: 5rem;
+                width: 5rem;
+                height: 5rem;
+                padding: 1rem 1.8rem;
+            }
+        }
+        .extras__text{
+          margin-left: 2rem;
+          margin-bottom:1.5rem;
+         
+            
+         p{
+            text-align: justify;
+            color: gray;
+            font-size: 1.5rem;
+         }
+      
+       h3{
+        padding-bottom: 2rem;
+       }
+     a{
+        color: green;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+     }
+        }
+        
+    }
+    @include mediaQuery($break-lg)
+}
