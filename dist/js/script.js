@@ -42,11 +42,19 @@ function removeActiveContent() {
   });
 }
 
-// =====LINKS======//
-const links = document.querySelectorAll(".links__drop__item h4");
-links.forEach((baba) => {
-  baba.addEventListener("click", () => {
-    baba.nextElementSibling.classList.toggle("open");
-    baba.querySelector("i").classList.toggle("open");
-  });
-});
+// // =====LINKS======//
+// const links = document.querySelectorAll(".links__drop__item h4");
+// links.forEach((baba) => {
+//   baba.addEventListener("click", () => {
+//     baba.nextElementSibling.classList.toggle("open");
+//     baba.querySelector("i").classList.toggle("open");
+//   });
+// });
+
+const baba = document.querySelectorAll(".links__item h4")
+baba.forEach((baba) => {
+    baba.addEventListener("click", () => {
+        baba.nextElementSibling.classList.toggle("open");
+        baba.querySelector("i").classList.toggle("open");
+    })
+})

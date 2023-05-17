@@ -1,70 +1,47 @@
+
+
+// links
 .links{
-    background: $clr-light;
-    img{
-        width: 10rem;
+    border-top: 1px solid rgb(205, 205, 205) ;
+    background-color: $clr-light;
+
+    &__wrapper{
+        border-bottom: 1px solid rgb(205, 205, 205) ;
     }
-    &__drop{
-        margin: 5rem 0;
-        &__item{
-            &:not(:first-child),&:not(:last-child){
-                margin: 3rem 0;
-            }
-            h4{
-                color: $clr-gray;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                i{
-                    transition: .5s ease;
-                    &.open{
-                        transform: rotate(180deg);
-                        transition: .5s ease;
-                    }
-                }
-            }
-            ul{
-                margin: 0 2rem;
-                max-height: 0rem;
-                overflow: hidden;
-                transition: .5s ease;
-                &.open{
-                    max-height: 15rem;
-                    transition: .5s ease;
-                }
-                li{
-                    padding: 1rem 0;
-                    a{
-                        color: gray;
-                        font-size: 2rem;
-                    }
-                    &:hover{
-                        cursor: pointer;
-                        a{
-                            color: $clr-dark;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    &__social{
-        ul{
+    &__item{
+        margin: 3rem 0;
+        h4{
             display: flex;
-            gap: 2rem;
-            li{
-                a{
-                    color: $clr-light;
-                    display: inline-block;
-                    background: gray;
-                    padding: 1rem;
-                    border-radius: 5rem;
-                    width: 4.5rem;
-                    text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            i{
+                transition: 300ms;
+                font-size: 2rem;
+
+                &.open{
+                    transform: rotate(-180deg);
+                    transition: 300ms;
                 }
-                &:hover{
-                    cursor: pointer;
-                    a{
-                        color: $clr-green;
+            }
+
+        }
+        ul{
+            margin-left: 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: 300ms;
+            &.open{
+                max-height: 25rem;
+                transition: 300ms;
+            }
+            li{
+                margin: 2rem 0;
+                a{
+                    font-size: 1.5rem;
+                    opacity: .9;
+                    &:hover{
+                        opacity: unset;
                     }
                 }
             }
@@ -72,35 +49,29 @@
     }
     @include mediaQuery($break-lg){
         &__wrapper{
-            display: grid;
-            grid-template-columns: .5fr 2fr 1.5fr;
-            grid-gap: 5rem;
-        }
-        &__drop{
-            margin: 0;
-            display: flex;
+            @include grid(5, 0rem);
             align-items: start;
-            gap: 10rem;
-            &__item{
-                &:not(:first-child),&:not(:last-child){
-                    margin: 0;
+            
+
+        }
+        &__item{
+            h4{
+                font-size: 2.2rem;
+                font-weight: 600;
+                i{
+                    display: none;
                 }
-                h4{
-                    pointer-events: none;
-                    i{
-                        display: none;
+            }
+            ul{
+                max-height: none;
+                margin-left: unset;
+                li{
+                   
+                    a{
+                        font-size: 1.7rem;
+
                     }
                 }
-                ul{
-                    max-height: 45rem;
-                    margin: 1rem 0;
-                }
-
-            }
-        }
-        &__social{
-            ul{
-                justify-content: flex-end;
             }
         }
     }
