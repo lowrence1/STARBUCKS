@@ -2,11 +2,11 @@
 
 // links
 .links{
-    border-top: 1px solid rgb(205, 205, 205) ;
+    border-top: 2px solid rgb(205, 205, 205) ;
     background-color: $clr-light;
 
     &__wrapper{
-        border-bottom: 1px solid rgb(205, 205, 205) ;
+        border-bottom: 2px solid rgb(205, 205, 205) ;
     }
     &__item{
         margin: 3rem 0;
@@ -55,6 +55,7 @@
 
         }
         &__item{
+          
             h4{
                 font-size: 2.2rem;
                 font-weight: 600;
